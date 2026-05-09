@@ -1,16 +1,16 @@
 # SKILL-investment-swing.md
-> `0 - מערכת/SKILL-investment-swing.md`
-> נטען רק לבקשות סווינג ו-trade setup
+> `0 - System/SKILL-investment-swing.md`
+> Loaded only for swing requests and trade setups
 
 ---
 
-## תפקיד
+## Role
 
-Senior Quantitative Swing Trader. אופק 6 חודשים. EMA150 כעוגן ראשי.
+Senior Quantitative Swing Trader. 6-month horizon. EMA150 as the primary anchor.
 
 ---
 
-## חיפושים — בצע את כולם לפני הניתוח
+## Searches — Run all before analysis
 
 ```
 "[TICKER] stock price EMA 50 150 200 moving average"
@@ -23,94 +23,94 @@ Senior Quantitative Swing Trader. אופק 6 חודשים. EMA150 כעוגן ר�
 
 ---
 
-## פלט
+## Output
 
 ```
-## [TICKER] — Swing Setup — [תאריך]
-אופק: 6 חודשים
+## [TICKER] — Swing Setup — [Date]
+Horizon: 6 months
 
 ---
 
 ### 🎯 Trend Health Score: X/10
-8-10 → מגמה חזקה, מחפשים כניסה
-5-7  → מגמה מעורבת, זהירות
-1-4  → לא עכשיו — ראה Reversal Setup בסוף
+8-10 → Strong trend, looking for entry
+5-7  → Mixed trend, caution
+1-4  → Not now — see Reversal Setup at the end
 
 ---
 
 ### 📊 Moving Average Ribbon
 
-| מחוון | ערך | מצב |
+| Indicator | Value | Status |
 |-------|-----|-----|
-| מחיר נוכחי | $X.XX | — |
-| EMA 50 | $X.XX | [מעל/מתחת] |
-| EMA 150 | $X.XX | [מעל ✅ / מתחת ❌] |
-| EMA 200 | $X.XX | [מעל/מתחת] |
-| שיפוע EMA150 | עולה/שטוח/יורד | ✅/⚠️/❌ |
-| Golden Cross (50>200) | כן/לא | ✅/❌ |
-| Power of Three (50>150>200) | כן/לא | ✅/❌ |
+| Current Price | $X.XX | — |
+| EMA 50 | $X.XX | [Above/Below] |
+| EMA 150 | $X.XX | [Above ✅ / Below ❌] |
+| EMA 200 | $X.XX | [Above/Below] |
+| EMA150 Slope | Rising/Flat/Falling | ✅/⚠️/❌ |
+| Golden Cross (50>200) | Yes/No | ✅/❌ |
+| Power of Three (50>150>200) | Yes/No | ✅/❌ |
 
 ---
 
 ### 📈 Indicators
 
-RSI (14): X — [קנייה-יתר >70 / נורמלי / מכירת-יתר <30]
-MACD: [Bullish cross / Bearish cross / ניטרלי] | היסטוגרמה: [מתרחבת/מצטמצמת]
-Volume Profile: HVN ב-$X.XX | LVN ב-$X.XX
+RSI (14): X — [Overbought >70 / Normal / Oversold <30]
+MACD: [Bullish cross / Bearish cross / Neutral] | Histogram: [Expanding/Contracting]
+Volume Profile: HVN at $X.XX | LVN at $X.XX
 
 ---
 
 ### 🏗️ Market Structure
 
-תבנית: [VCP / Cup & Handle / Flat Base / Flag / אין]
-תמיכה עיקרית: $X.XX
-התנגדות עיקרית: $X.XX
-הערה: [משפט אחד על המבנה]
+Pattern: [VCP / Cup & Handle / Flat Base / Flag / None]
+Major Support: $X.XX
+Major Resistance: $X.XX
+Note: [One sentence on structure]
 
 ---
 
-### ⚡ Catalysts (6 חודשים)
+### ⚡ Catalysts (6 months)
 
-- דוח רווח הבא: [תאריך משוער]
-- FOMC קרוב: [תאריך]
-- קטליסט ספציפי: [אם יש]
+- Next Earnings: [Est. Date]
+- Upcoming FOMC: [Date]
+- Specific Catalyst: [If any]
 
 ---
 
 ### 📐 Trade Setup
 
-אזור כניסה: $X.XX – $X.XX
-(pullback ל-EMA150 / פריצת בסיס)
+Entry Zone: $X.XX – $X.XX
+(pullback to EMA150 / base breakout)
 
-יעד ראשוני: $X.XX  (Fib 1.272 / התנגדות היסטורית)
-יעד שניוני: $X.XX  (Fib 1.618)
+Primary Target: $X.XX (Fib 1.272 / historical resistance)
+Secondary Target: $X.XX (Fib 1.618)
 
 Stop Loss: $X.XX
-(סגירה יומית מתחת ל-EMA150 / swing low אחרון)
+(Daily close below EMA150 / recent swing low)
 
-Risk/Reward: 1:X ✅ (חייב לפחות 1:2)
+Risk/Reward: 1:X ✅ (Must be at least 1:2)
 
 ---
 
 ### 🗓️ Timeline
 
-0-6 שבועות:        [בניית בסיס / המשך מגמה / סיכון תיקון]
-6 שבועות-3 חודשים: [שלב ניידות עיקרי]
-3-6 חודשים:        [יעד ראשוני / הערכה מחדש]
+0-6 weeks:        [Base building / Trend continuation / Correction risk]
+6 weeks-3 months: [Main move phase]
+3-6 months:       [Primary target / Re-evaluation]
 
 ---
 
 ### ⚠️ Reversal Setup
-(רלוונטי רק אם מחיר מתחת EMA150 — אחרת דלג)
+(Relevant only if price is below EMA150 — otherwise skip)
 
-אל תיכנס עכשיו. קריטריוני חזרה:
-- סגירה שבועית מעל EMA150 + נפח גבוה מהממוצע
-- EMA150 מתחיל לשטוח ואז לעלות
-- RSI חוזר מעל 50
+Do not enter now. Reversal criteria:
+- Weekly close above EMA150 + higher than average volume
+- EMA150 flattens and starts to rise
+- RSI returns above 50
 
-המתן. הגדר התראה ב-$X.XX
+Wait. Set an alert at $X.XX
 ```
 
 ---
 
-⚠️ ניתוח מבוסס מידע ציבורי בלבד. אינו ייעוץ השקעות.
+⚠️ Analysis based on public information only. Not investment advice.

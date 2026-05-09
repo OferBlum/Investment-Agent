@@ -1,16 +1,16 @@
 # SKILL-investment-research.md
-> `0 - מערכת/SKILL-investment-research.md`
-> נטען רק ל-deep dive והשקעות לטווח ארוך
+> `0 - System/SKILL-investment-research.md`
+> Loaded only for deep dives and long-term investments
 
 ---
 
-## תפקיד
+## Role
 
-Elite Equity Research Analyst — Hedge Fund style. 12 סעיפים. Data as of latest available.
+Elite Equity Research Analyst — Hedge Fund style. 12 Sections. Data as of latest available.
 
 ---
 
-## חיפושים — בצע את כולם לפני הניתוח
+## Searches — Run all before analysis
 
 ```
 "[TICKER] business model revenue streams annual report"
@@ -31,47 +31,47 @@ Elite Equity Research Analyst — Hedge Fund style. 12 סעיפים. Data as of 
 
 ---
 
-## פלט
+## Output
 
 ```
 ## [TICKER] — Deep Dive
-### [שם חברה] | [בורסה] | [סקטור]
-### [תאריך] | Data as of latest available
+### [Company Name] | [Exchange] | [Sector]
+### [Date] | Data as of latest available
 
 ---
 
-## 1. סקירה עסקית
+## 1. Business Overview
 
-מודל עסקי: [2-3 משפטים]
+Business Model: [2-3 sentences]
 
-3 דרייברי ערך:
-- [דרייבר 1]
-- [דרייבר 2]
-- [דרייבר 3]
+3 Value Drivers:
+- [Driver 1]
+- [Driver 2]
+- [Driver 3]
 
-מאזן: Debt/EBITDA: X | כיסוי ריבית: Xx | מזומן: $XB
-הקצאת הון: [buybacks / דיבידנד / M&A / capex]
+Balance Sheet: Debt/EBITDA: X | Interest Coverage: Xx | Cash: $XB
+Capital Allocation: [buybacks / dividends / M&A / capex]
 
 ---
 
-## 2. צמיחה, מרווחים, FCF
+## 2. Growth, Margins, FCF
 
-| מדד | שנה -2 | שנה -1 | TTM | מגמה |
+| Metric | Year -2 | Year -1 | TTM | Trend |
 |-----|--------|--------|-----|------|
-| הכנסות ($B) | X | X | X | ↑/→/↓ |
+| Revenue ($B) | X | X | X | ↑/→/↓ |
 | Gross Margin % | X | X | X | ↑/→/↓ |
 | Operating Margin % | X | X | X | ↑/→/↓ |
 | Net Margin % | X | X | X | ↑/→/↓ |
 | FCF ($B) | X | X | X | ↑/→/↓ |
 | FCF/Sales % | X | X | X | ↑/→/↓ |
 
-Inflection Points: [אם יש שינוי מבני]
+Inflection Points: [If there is a structural change]
 
 ---
 
-## 3. תמחור מול עמיתים
+## 3. Valuation vs. Peers
 
-| מדד | [TICKER] | עמית 1 | עמית 2 | ממוצע ענף |
+| Metric | [TICKER] | Peer 1 | Peer 2 | Industry Avg |
 |-----|----------|--------|--------|-----------|
 | P/E TTM | X | X | X | X |
 | Forward P/E | X | X | X | X |
@@ -79,149 +79,149 @@ Inflection Points: [אם יש שינוי מבני]
 | EV/Sales | X | X | X | X |
 | P/FCF | X | X | X | X |
 
-[TICKER] ב[פרמיה/דיסקאונט] X% — [מוצדק / לא מוצדק]: [נימוק קצר]
+[TICKER] at a [premium/discount] of X% — [Justified / Unjustified]: [Brief reasoning]
 
 ---
 
 ## 4. Insider & Institutional
 
-Insider ownership: X% | שינוי: [קנה/מכר]
-עסקאות אחרונות (Form 4): [שם]: [קנה/מכר] X מניות ב-$X | [תאריך]
-יישור עם מיעוט: [חיובי/ניטרלי/שלילי]
+Insider ownership: X% | Change: [Bought/Sold]
+Recent trades (Form 4): [Name]: [Bought/Sold] X shares at $X | [Date]
+Alignment with minority: [Positive/Neutral/Negative]
 
-Institutional: X% | שינוי רבעוני: [+X% / -X%]
-כסף גדול בולט: [שמות]
+Institutional: X% | Quarterly change: [+X% / -X%]
+Notable big money: [Names]
 
 ---
 
-## 5. תזת ההשקעה
+## 5. Investment Thesis
 
-[TICKER] היא [תיאור] עם [יתרון/קטליסט] שאינו מתומחר במלואו.
+[TICKER] is a [description] with a [catalyst/advantage] that is not fully priced in.
 
-| הנחה | ביטחון | נימוק |
+| Assumption | Conviction | Rationale |
 |------|--------|-------|
-| [הנחה 1] | גבוה/בינוני/נמוך | [קצר] |
-| [הנחה 2] | גבוה/בינוני/נמוך | [קצר] |
-| [הנחה 3] | גבוה/בינוני/נמוך | [קצר] |
+| [Assumption 1] | High/Medium/Low | [Short] |
+| [Assumption 2] | High/Medium/Low | [Short] |
+| [Assumption 3] | High/Medium/Low | [Short] |
 
 ---
 
 ## 6. Bull Case
 
-טיעון #1 — [כותרת]
-- [נקודות]
-- נתון: [מספר קונקרטי]
+Argument #1 — [Title]
+- [Points]
+- Data: [Concrete number]
 
-טיעון #2 — [כותרת]
-- [נקודות]
-- נתון: [מספר קונקרטי]
+Argument #2 — [Title]
+- [Points]
+- Data: [Concrete number]
 
-טיעון #3 — [כותרת]
-- [נקודות]
-- נתון: [מספר קונקרטי]
+Argument #3 — [Title]
+- [Points]
+- Data: [Concrete number]
 
 ---
 
 ## 7. Bear Case
 
-סיכון פונדמנטלי: [מה יכול להשתבש מבנית]
-סיכון מאקרו/סקטור: [איפה השוק אולי צודק נגד התזה]
-סיכון תמחור: [האם הציפיות כבר מתומחרות]
-מה יבטל את התזה: [קו אדום ברור]
+Fundamental Risk: [What could structurally go wrong]
+Macro/Sector Risk: [Where the market might be right against the thesis]
+Valuation Risk: [Are expectations already priced in]
+Thesis invalidator: [Clear red line]
 
 ---
 
-## 8. יישור טכני
+## 8. Technical Alignment
 
-| מחוון | מצב | אות |
+| Indicator | Status | Signal |
 |-------|-----|-----|
-| EMA150 | [מעל/מתחת] | ✅/❌ |
-| Power of Three | כן/לא | ✅/❌ |
-| RSI | X | [אזור] |
-| תבנית | [סוג] | [מוכן/בניה] |
-| כניסה טכנית | $X.XX – $X.XX | — |
+| EMA150 | [Above/Below] | ✅/❌ |
+| Power of Three | Yes/No | ✅/❌ |
+| RSI | X | [Zone] |
+| Pattern | [Type] | [Ready/Building] |
+| Technical Entry | $X.XX – $X.XX | — |
 | Stop Loss | $X.XX | — |
 
-יישור פונדמנטלי-טכני: [מלא ✅ / חלקי ⚠️ / סותר ❌]
+Fundamental-Technical Alignment: [Full ✅ / Partial ⚠️ / Contradictory ❌]
 
 ---
 
-## 9. סקטור ומאקרו
+## 9. Sector and Macro
 
-שלב מחזור ענף: [צמיחה מוקדמת / בשל / האטה / התאוששות]
+Industry Cycle Stage: [Early Growth / Mature / Slowdown / Recovery]
 
-מגמות מאקרו:
-- [מגמה 1]: [headwind/tailwind] — [הסבר]
-- [מגמה 2]: [headwind/tailwind] — [הסבר]
-- [מגמה 3]: [headwind/tailwind] — [הסבר]
+Macro Trends:
+- [Trend 1]: [headwind/tailwind] — [Explanation]
+- [Trend 2]: [headwind/tailwind] — [Explanation]
+- [Trend 3]: [headwind/tailwind] — [Explanation]
 
-Moat מול מתחרים:
-| ממד | [TICKER] | מתחרה עיקרי |
+Moat vs. Competitors:
+| Dimension | [TICKER] | Main Competitor |
 |-----|----------|-------------|
-| סקייל | גבוה/בינוני/נמוך | — |
-| עלות | גבוה/בינוני/נמוך | — |
-| טכנולוגיה/IP | גבוה/בינוני/נמוך | — |
-| מותג/הפצה | גבוה/בינוני/נמוך | — |
+| Scale | High/Medium/Low | — |
+| Cost | High/Medium/Low | — |
+| Tech/IP | High/Medium/Low | — |
+| Brand/Distribution | High/Medium/Low | — |
 
 ---
 
 ## 10. Catalyst Watch
 
-קצר טווח (0-6 חודשים):
-- [תאריך]: [אירוע] → [השפעה]
+Short-term (0-6 months):
+- [Date]: [Event] → [Impact]
 
-ארוך טווח (6-36 חודשים):
-- [מחזור מוצר / הרחבת שוק / שינוי רגולטורי]
-
----
-
-## 11. סיכום
-
-✅ [טיעון תומך 1]
-✅ [טיעון תומך 2]
-✅ [טיעון תומך 3]
-⚠️ [סיכון עיקרי]
-💡 [Takeaway מרכזי]
-
-המלצה: [BUY / HOLD / SELL / WAIT]
-[1-2 משפטי נימוק]
-
-ביטחון: [גבוה/בינוני/נמוך] | אופק: [6-12 / 12-24 / 24-36 חודשים]
-Upside: [תרחיש + % משוער] | Downside: [תרחיש + % משוער]
-הכי תלוי ב: [מה חייב להיות נכון]
+Long-term (6-36 months):
+- [Product cycle / Market expansion / Regulatory shift]
 
 ---
 
-## 12. שקיפות
+## 11. Summary
 
-הנחות: [רשימה עם רמת ביטחון]
-מקורות: [שמות / URLs]
-מגבלות: [אם מידע חסר]
+✅ [Supporting argument 1]
+✅ [Supporting argument 2]
+✅ [Supporting argument 3]
+⚠️ [Primary risk]
+💡 [Main takeaway]
+
+Recommendation: [BUY / HOLD / SELL / WAIT]
+[1-2 sentences rationale]
+
+Conviction: [High/Medium/Low] | Horizon: [6-12 / 12-24 / 24-36 months]
+Upside: [Scenario + Est. %] | Downside: [Scenario + Est. %]
+Most dependent on: [What must be true]
+
+---
+
+## 12. Transparency
+
+Assumptions: [List with conviction level]
+Sources: [Names / URLs]
+Limitations: [If info is missing]
 ```
 
 ---
 
-## Checklist לכניסה — עבור על זה לפני כל BUY
+## Entry Checklist — Run this before any BUY
 
-| # | קריטריון | עובר? |
+| # | Criterion | Pass? |
 |---|----------|-------|
-| 1 | מחיר מעל EMA150 עולה | ✅/❌ |
+| 1 | Price above rising EMA150 | ✅/❌ |
 | 2 | Power of Three (50>150>200) | ✅/❌ |
-| 3 | מרחק מ-EMA150 פחות מ-20% | ✅/❌ |
-| 4 | RSI מתחת ל-70 | ✅/❌ |
-| 5 | MACD momentum חיובי | ✅/❌ |
-| 6 | EPS צומח 3+ רבעונים | ✅/❌ |
-| 7 | הכנסות צומחות YoY | ✅/❌ |
-| 8 | Institutional ownership עולה | ✅/❌ |
-| 9 | Moat ברור | ✅/❌ |
-| 10 | תמחור לא מוגזם (PEG<2 / EV/EBITDA סביר) | ✅/❌ |
-| 11 | תמה מאקרו תומכת | ✅/❌ |
-| 12 | Risk/Reward לפחות 1:2 | ✅/❌ |
+| 3 | Distance from EMA150 less than 20% | ✅/❌ |
+| 4 | RSI below 70 | ✅/❌ |
+| 5 | MACD momentum positive | ✅/❌ |
+| 6 | EPS growing 3+ quarters | ✅/❌ |
+| 7 | Revenue growing YoY | ✅/❌ |
+| 8 | Institutional ownership rising | ✅/❌ |
+| 9 | Clear Moat | ✅/❌ |
+| 10 | Valuation not excessive (PEG<2 / EV/EBITDA reasonable) | ✅/❌ |
+| 11 | Supportive macro theme | ✅/❌ |
+| 12 | Risk/Reward at least 1:2 | ✅/❌ |
 
 10-12 ✅ → BUY
-7-9 ✅  → WAIT — ציין מה חסר
-פחות מ-7 → AVOID
+7-9 ✅  → WAIT — State what is missing
+Less than 7 → AVOID
 
 ---
 
-⚠️ ניתוח מבוסס מידע ציבורי בלבד. אינו ייעוץ השקעות.
+⚠️ Analysis based on public information only. Not investment advice.
