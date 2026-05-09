@@ -9,7 +9,7 @@ The Investment Agent manages, analyzes, and provides insights on your investment
 - `SKILL-investment-agent.md`: The core identity and tasks of the investment agent.
 - `SKILL-investment-research.md`: The skill containing rules and heuristics for deep market research.
 - `SKILL-investment-swing.md`: The skill dedicated to analyzing short-term swing trading opportunities.
-- `Portfolio.md`: The portfolio file which contains all the data relevant to you/
+- `Portfolio.md`: The portfolio file which contains all the data relevant to you
 
 ## Usage
 To use these skills with an AI agent (e.g., Claude Code), place these files in your system prompts/skills directory, and let the agent load them dynamically when queried about investments, stock market, or portfolio management.
