@@ -1,5 +1,4 @@
 # SKILL-investment-research.md
-> `0 - System/SKILL-investment-research.md`
 > Loaded only for deep dives and long-term investments
 
 ---

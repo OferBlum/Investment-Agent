@@ -1,5 +1,4 @@
 # SKILL-investment-agent.md
-> `0 - System/SKILL-investment-agent.md`
 
 ---
 

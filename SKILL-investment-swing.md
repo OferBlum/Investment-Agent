@@ -1,5 +1,4 @@
 # SKILL-investment-swing.md
-> `0 - System/SKILL-investment-swing.md`
 > Loaded only for swing requests and trade setups
 
 ---

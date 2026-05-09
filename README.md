@@ -1,15 +1,130 @@
-# AI Investment Agent (סוכן השקעות חכם)
+# AI Investment Agent
 
-This repository contains the logic and prompts for an AI Investment Agent designed to operate within an Obsidian Vault environment using Claude Code.
+A modular, prompt-based AI agent system for investment analysis and portfolio management, designed to run inside an [Obsidian](https://obsidian.md/) vault powered by [Claude Code](https://docs.anthropic.com/claude/docs).
 
-## Overview
-The Investment Agent manages, analyzes, and provides insights on your investment portfolio. It is broken down into specific skills that a central AI agent can lazy-load when analyzing the market or user's portfolio.
+The agent combines fundamental equity research with quantitative swing-trading analysis into a single, context-aware assistant that lazy-loads specialized skills on demand.
 
-## Files included:
-- `SKILL-investment-agent.md`: The core identity and tasks of the investment agent.
-- `SKILL-investment-research.md`: The skill containing rules and heuristics for deep market research.
-- `SKILL-investment-swing.md`: The skill dedicated to analyzing short-term swing trading opportunities.
-- `Portfolio.md`: The portfolio file which contains all the data relevant to you
+---
 
-## Usage
-To use these skills with an AI agent (e.g., Claude Code), place these files in your system prompts/skills directory, and let the agent load them dynamically when queried about investments, stock market, or portfolio management.
+## Features
+
+- **Portfolio Tracking** — Reads a live `Portfolio.md` file and runs status checks across all holdings.
+- **Quick-Check** — Instant price, EMA150 status, and news summary for any ticker.
+- **Position Sizing** — Risk-based calculator following Minervini-style rules (default 1% risk per trade).
+- **Swing Setup Analysis** — 6-month trade setups with entry zones, targets, stop-loss, and risk/reward ratios.
+- **Deep-Dive Research** — 12-section institutional-grade equity research reports (business model, margins, valuation, moat, technicals, catalysts, and more).
+- **Weekly Portfolio Scan** — Automated weekly review of all holdings plus macro event watch.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| AI Runtime | [Claude Code](https://docs.anthropic.com/claude/docs) (Anthropic) |
+| Knowledge Base | [Obsidian](https://obsidian.md/) Markdown vault |
+| Skill System | Lazy-loaded `.md` prompt files (SKILL pattern) |
+| Data Sources | Web search (real-time prices, news, financials) |
+| Portfolio Format | Plain Markdown table (`Portfolio.md`) |
+
+---
+
+## Repository Structure
+
+```
+Investment_Agent/
+├── SKILL-investment-agent.md    # Core agent identity, routing logic, quick-check & position sizing
+├── SKILL-investment-research.md # Deep-dive equity research (12-section report)
+├── SKILL-investment-swing.md    # Swing trading setup analysis (6-month horizon)
+├── Portfolio.md                 # Live portfolio file (holdings, watchlist, cash)
+└── README.md
+```
+
+---
+
+## Installation & Setup
+
+### Prerequisites
+
+- [Obsidian](https://obsidian.md/) (any version)
+- [Claude Code CLI](https://docs.anthropic.com/claude/docs/claude-code) with an active Anthropic API key
+
+### Steps
+
+1. **Clone or copy** this folder into your Obsidian vault's system directory:
+   ```
+   <your-vault>/0 - System/
+   ```
+
+2. **Place skill files** so Claude Code can find them:
+   ```
+   <your-vault>/0 - System/SKILL-investment-agent.md
+   <your-vault>/0 - System/SKILL-investment-research.md
+   <your-vault>/0 - System/SKILL-investment-swing.md
+   ```
+
+3. **Create your personal portfolio file** by copying and editing `Portfolio.md`:
+   ```
+   <your-vault>/Portfolio.md
+   ```
+   Fill in your actual holdings, watchlist, and cash balances.
+
+4. **Run Claude Code** from your vault directory and invoke the agent with any investment-related query.
+
+---
+
+## Usage Examples
+
+```
+# Quick status check
+"Quick check on NVDA"
+
+# Position sizing
+"How many shares of AAPL should I buy? Account is $50,000, entry at $210, stop at $195."
+
+# Swing trade setup
+"Give me a swing setup for META"
+
+# Deep research
+"Full deep dive on MSFT"
+
+# Portfolio review
+"Run the weekly scan"
+```
+
+The agent automatically routes each request to the appropriate skill file — no manual configuration needed.
+
+---
+
+## How the Skill System Works
+
+The agent uses a **lazy-loading routing table**: the core file (`SKILL-investment-agent.md`) handles simple requests directly, and instructs Claude to load the appropriate specialized skill file only when needed. This keeps context usage low and responses focused.
+
+| Request Type | Skill Loaded |
+|---|---|
+| Quick check / weekly scan / position size | Core agent only |
+| Swing trade / entry setup | `SKILL-investment-swing.md` |
+| Deep dive / long-term thesis | `SKILL-investment-research.md` |
+
+---
+
+## Investment Philosophy
+
+The agent is built on a combined fundamental + technical discipline:
+
+- **No entry without alignment** of both fundamentals and technicals.
+- **EMA150 as the primary trend anchor** — entries only above a rising EMA150.
+- **Minervini-style risk management** — 1% account risk per trade, max 6-8% total open risk.
+- **Power of Three** (EMA50 > EMA150 > EMA200) as a trend confirmation filter.
+
+---
+
+## Disclaimer
+
+> All analysis generated by this agent is based on publicly available information and is intended for **educational and personal research purposes only**. It does not constitute financial advice. Always conduct your own due diligence before making investment decisions.
+
+---
+
+## License
+
+MIT License — see [LICENSE](LICENSE) for details.
