@@ -1,32 +1,67 @@
 ---
-Created: 2024-01-01
+Created: YYYY-MM-DD
+Updated: YYYY-MM-DD
+topic: "investments"
 tags:
-  - investments
+private: false
 ---
 
-# Investment Portfolio (Example)
+# 💼 Investment Portfolio
 
-> **Last Updated:** 2024-01-01
+---
 
-## Cash Flow and Balances
+## 📊 General Info
 
-| Item | Amount | Currency | Notes |
-| :--- | :--- | :--- | :--- |
-| **Available Cash in Portfolio** | 0.00 | USD | |
-| **Checking Account Cash** | 0.00 | USD | |
-| **Recent Deposits** | 0.00 | USD | |
+| Field                  | Value                                      |
+| ---------------------- | ------------------------------------------ |
+| Currency               | USD                                        |
+| Broker                 | —                                          |
+| Strategy               | Long-term investing + swing trades         |
+| Technical Anchor       | EMA 150                                    |
+| Max Risk per Trade     | 1% of account                              |
+| Max Total Exposure     | 8% of account                              |
 
-## Equities
+---
 
-| Ticker / Name | Quantity | Avg Buy Price | Total Invested | Current Price | Current Value | Return (%) | Weight (%) | Investment Thesis / Role |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| EXAMPLE | 0 | $0.00 | $0.00 | $0.00 | $0.00 | 0.0% | 0.0% | |
+## 🏦 Active Holdings
 
-## Watchlist
+### Stocks
 
-| Ticker | Sector | Target Entry Price | Trigger / Why tracking |
-| :--- | :--- | :--- | :--- |
-| EX2 | Example | $0.00 | |
+| Ticker | Name    | Qty | Entry $ | Stop $  | Sector     | Theme        |
+| ------ | ------- | --- | ------- | ------- | ---------- | ------------ |
+| EXAMPLE | Example Corp | 0 | $0.00 | **$0.00** | Technology | AI Infrastructure |
 
-## Operations Log & Thoughts
-* **2024-01-01:** Portfolio initialized for tracking.
+### ETFs
+
+| Ticker | Name               | Qty | Entry $ | Type        |
+| ------ | ------------------ | --- | ------- | ----------- |
+| EXAMPLE | Example ETF       | 0   | $0.00   | Broad Market |
+
+---
+
+## 👀 Watchlist
+
+| Ticker | Name        | Theme         | What's missing for entry | Summary & Score (Deep Dive) |
+| ------ | ----------- | ------------- | ------------------------ | --------------------------- |
+| EXAMPLE | Example Co | AI Infrastructure | — | — |
+
+---
+
+## 📈 Sector Exposure
+
+| Sector          | Tickers | Note               |
+| --------------- | ------- | ------------------ |
+| Technology / AI | —       | —                  |
+| Broad Market    | —       | Anchor             |
+
+---
+
+## ✅ Tasks
+
+- [ ] 📅 YYYY-MM-DD Example task
+
+---
+
+## 📝 Notes
+
+<!-- Add free-form notes on the portfolio, decisions, and insights here -->

@@ -12,7 +12,7 @@ The agent combines fundamental equity research with quantitative swing-trading a
 - **Quick-Check** — Instant price, EMA150 status, and news summary for any ticker.
 - **Position Sizing** — Risk-based calculator following Minervini-style rules (default 1% risk per trade).
 - **Swing Setup Analysis** — 6-month trade setups with entry zones, targets, stop-loss, and risk/reward ratios.
-- **Deep-Dive Research** — 12-section institutional-grade equity research reports (business model, margins, valuation, moat, technicals, catalysts, and more).
+- **Deep-Dive Research** — 5-layer institutional-grade equity research reports (Profitability, Valuation, Cash Flow, Financial Health, Forward Signals) with a 26-dimension analysis appendix.
 - **Weekly Portfolio Scan** — Automated weekly review of all holdings plus macro event watch.
 
 ---
@@ -25,7 +25,7 @@ The agent combines fundamental equity research with quantitative swing-trading a
 | Knowledge Base | [Obsidian](https://obsidian.md/) Markdown vault |
 | Skill System | Lazy-loaded `.md` prompt files (SKILL pattern) |
 | Data Sources | Web search (real-time prices, news, financials) |
-| Portfolio Format | Plain Markdown table (`Portfolio.md`) |
+| Portfolio Format | Structured Markdown (`Portfolio.md`) — holdings with stops, watchlist with deep-dive scores, sector exposure |
 
 ---
 
@@ -34,7 +34,7 @@ The agent combines fundamental equity research with quantitative swing-trading a
 ```
 Investment_Agent/
 ├── SKILL-investment-agent.md    # Core agent identity, routing logic, quick-check & position sizing
-├── SKILL-investment-research.md # Deep-dive equity research (12-section report)
+├── SKILL-investment-research.md # Deep-dive equity research (5-layer report + 26-dimension appendix)
 ├── SKILL-investment-swing.md    # Swing trading setup analysis (6-month horizon)
 ├── Portfolio.md                 # Live portfolio file (holdings, watchlist, cash)
 └── README.md
