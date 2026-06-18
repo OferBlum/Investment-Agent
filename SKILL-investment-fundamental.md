@@ -1,19 +1,19 @@
 # SKILL-investment-fundamental.md
 > `0 - מערכת/SKILL-investment-fundamental.md`
-> נטען לניתוח פונדמנטלי בלבד — ללא טכני וללא המלצת כניסה
+> Loaded for fundamental analysis only — no technicals and no entry recommendation
 
 ---
 
-## תפקיד
+## Role
 
-Elite Equity Research Analyst — Hedge Fund style. ניתוח פונדמנטלי מקיף ב-5 שכבות + 26 ממדים.
-הפלט של קובץ זה הוא חומר גלם לניתוח מלא (`SKILL-investment-deep-analyze.md`) — או תשובה עצמאית לשאלת פונדמנטלס.
+Elite Equity Research Analyst — Hedge Fund style. Comprehensive fundamental analysis in 5 layers + 26 dimensions.
+The output of this file is raw material for a full analysis (`SKILL-investment-deep-analyze.md`) — or a standalone answer to a fundamentals question.
 
 ---
 
-## נתונים — Playwright
+## Data — Playwright
 
-בצע את כל החיפושים הבאים לפני הניתוח:
+Run all of the following searches before the analysis:
 
 ```
 "[TICKER] business model revenue streams annual report"
@@ -36,45 +36,45 @@ Elite Equity Research Analyst — Hedge Fund style. ניתוח פונדמנטל�
 "[TICKER] earnings transcript latest quarter management commentary"
 ```
 
-מקורות מומלצים: SEC EDGAR, Seeking Alpha, Macrotrends, Wisesheets, FinViz.
+Recommended sources: SEC EDGAR, Seeking Alpha, Macrotrends, Wisesheets, FinViz.
 
 ---
 
-## פלט
+## Output
 
 ```
 ## [TICKER] — Fundamental Analysis
-### [שם חברה] | [בורסה] | [סקטור]
-### [תאריך] | Data as of latest available
+### [Company Name] | [Exchange] | [Sector]
+### [Date] | Data as of latest available
 
-> 🔍 Layer 0: כנס לאתר, ראה מוצרים, שמע מנכ"ל — לפני AI.
+> 🔍 Layer 0: Visit the site, see products, hear the CEO — before AI.
 
-מודל עסקי: [2-3 משפטים]
-דרייברי ערך: [א] | [ב] | [ג]
-הקצאת הון: [buybacks / דיבידנד / M&A / capex]
+Business model: [2-3 sentences]
+Value drivers: [A] | [B] | [C]
+Capital allocation: [buybacks / dividend / M&A / capex]
 
 ---
 
 ## Layer 1 — Profitability
 
-| מדד | שנה -2 | שנה -1 | TTM | מגמה |
-|-----|--------|--------|-----|------|
+| Metric | Year -2 | Year -1 | TTM | Trend |
+|--------|---------|---------|-----|-------|
 | Revenue ($B) | X | X | X | ↑/→/↓ |
 | Revenue YoY % | X% | X% | X% | ↑/→/↓ |
 | Gross Margin % | X% | X% | X% | ↑/→/↓ |
 | Operating Margin % | X% | X% | X% | ↑/→/↓ |
 | Net Margin % | X% | X% | X% | ↑/→/↓ |
 | EPS (reported vs est) | X / X | X / X | X / X | ↑/→/↓ |
-| EBITDA adj gap | קטן/בינוני/גדול | — | — | ↑/→/↓ |
+| EBITDA adj gap | Small/Med/Large | — | — | ↑/→/↓ |
 
-📌 [מאיץ או מואט? Pricing power? Beat streak? EBITDA gap?]
+📌 [Accelerating or decelerating? Pricing power? Beat streak? EBITDA gap?]
 
 ---
 
 ## Layer 2 — Valuation
 
-| מדד | [TICKER] | עמית 1 | עמית 2 | ממוצע ענף | ממוצע [TICKER] 5Y |
-|-----|----------|--------|--------|-----------|-------------------|
+| Metric | [TICKER] | Peer 1 | Peer 2 | Industry Avg | [TICKER] 5Y Avg |
+|--------|----------|--------|--------|--------------|------------------|
 | P/E TTM | X | X | X | X | X |
 | Forward P/E | X | X | X | X | X |
 | PEG | X | X | X | X | — |
@@ -83,154 +83,154 @@ Elite Equity Research Analyst — Hedge Fund style. ניתוח פונדמנטל�
 | P/B | X | X | X | X | X |
 | P/FCF | X | X | X | X | X |
 
-📌 [זול/יקר vs היסטוריה ועמיתים? Multiple expansion/compression?]
+📌 [Cheap/expensive vs history and peers? Multiple expansion/compression?]
 
 ---
 
 ## Layer 3 — Cash Flow
 
-| מדד | שנה -2 | שנה -1 | TTM | מגמה |
-|-----|--------|--------|-----|------|
+| Metric | Year -2 | Year -1 | TTM | Trend |
+|--------|---------|---------|-----|-------|
 | OCF ($B) | X | X | X | ↑/→/↓ |
 | OCF / Net Income % | X% | X% | X% | ↑/→/↓ |
 | FCF ($B) | X | X | X | ↑/→/↓ |
 | FCF Margin % | X% | X% | X% | ↑/→/↓ |
 | FCF Yield % | X% | X% | X% | — |
 
-📌 FCF Yield X% vs. 10Y Treasury X% — [מספק/לא מספק]
-[FCF גדל מהר מהכנסות? OCF עקבי מעל Net Income?]
+📌 FCF Yield X% vs. 10Y Treasury X% — [adequate/inadequate]
+[FCF growing faster than revenue? OCF consistently above Net Income?]
 
 ---
 
 ## Layer 4 — Financial Health
 
-| מדד | ערך | מגמה | Stress Test (EBITDA −30%) |
-|-----|-----|------|---------------------------|
-| Debt/Equity | X | ↑/→/↓ | [עומד/לא עומד] |
+| Metric | Value | Trend | Stress Test (EBITDA −30%) |
+|--------|-------|-------|---------------------------|
+| Debt/Equity | X | ↑/→/↓ | [passes/fails] |
 | Net Cash / Debt ($B) | X | — | — |
 | Current Ratio | X | ↑/→/↓ | — |
-| Interest Coverage | Xx | ↑/→/↓ | [מעל/מתחת 3x] |
+| Interest Coverage | Xx | ↑/→/↓ | [above/below 3x] |
 | ROE % | X% | ↑/→/↓ | — |
 | ROE Driver | [Margin/Turnover/Leverage] | — | — |
 | ROIC % | X% | ↑/→/↓ | — |
-| ROIC > WACC | כן/לא | — | — |
+| ROIC > WACC | Yes/No | — | — |
 
-📌 [ROE אמיתי או leverage-driven? ROIC spread מתרחב/מצטמצם?]
+📌 [Real ROE or leverage-driven? ROIC spread expanding/contracting?]
 
 ---
 
 ## Layer 5 — Forward Signals
 
-| אות | נתון | פרשנות |
-|-----|------|----------|
-| Management Guidance | [מעל/מתחת/בקו] | [שמרני/אגרסיבי/בקו] |
-| Analyst Revisions (90d) | [+X% / −X% NTM EPS] | [משתפר/מתדרדר] |
-| Buy / Hold / Sell | X / X / X | [קונצנזוס חזק/חלש] |
-| EPS Beat Streak | X רבעונים | [מתרחב/מצטמצם] |
+| Signal | Data | Interpretation |
+|--------|------|----------------|
+| Management Guidance | [above/below/in-line] | [conservative/aggressive/in-line] |
+| Analyst Revisions (90d) | [+X% / −X% NTM EPS] | [improving/deteriorating] |
+| Buy / Hold / Sell | X / X / X | [strong/weak consensus] |
+| EPS Beat Streak | X quarters | [expanding/contracting] |
 | Buyback Quality | [real / SBC offset] | ✅/❌ |
 | Buyback Yield % | X% | — |
-| Insider Cluster Buy | כן/לא | ✅/❌ |
+| Insider Cluster Buy | Yes/No | ✅/❌ |
 | Institutional (QoQ) | [+X% / −X%] | — |
 
-📌 [הרוח בגב או בפנים? Beat streak מתדרדר = אזהרה מוקדמת]
+📌 [Tailwind or headwind? Declining beat streak = early warning]
 
 ---
 
-## סקטור, מאקרו ו-Moat
+## Sector, Macro & Moat
 
-שלב מחזור ענף: [צמיחה מוקדמת / בשל / האטה / התאוששות]
+Industry cycle stage: [Early growth / Mature / Slowdown / Recovery]
 
-מגמות מאקרו:
-- [מגמה 1]: [headwind/tailwind] — [הסבר]
-- [מגמה 2]: [headwind/tailwind] — [הסבר]
+Macro trends:
+- [Trend 1]: [headwind/tailwind] — [explanation]
+- [Trend 2]: [headwind/tailwind] — [explanation]
 
-| ממד Moat | [TICKER] | מתחרה עיקרי |
-|----------|----------|--------------|
-| סקייל | גבוה/בינוני/נמוך | — |
-| טכנולוגיה/IP | גבוה/בינוני/נמוך | — |
-| עלות/הפצה | גבוה/בינוני/נמוך | — |
+| Moat Dimension | [TICKER] | Main Competitor |
+|----------------|----------|-----------------|
+| Scale | High/Mid/Low | — |
+| Technology/IP | High/Mid/Low | — |
+| Cost/Distribution | High/Mid/Low | — |
 
-Catalysts קרובים (0–6 חודשים): [תאריך] — [אירוע] → [השפעה]
-Catalysts ארוכים (6–36 חודשים): [מחזור מוצר / שוק חדש / רגולציה]
+Near-term Catalysts (0–6 months): [Date] — [Event] → [Impact]
+Long-term Catalysts (6–36 months): [product cycle / new market / regulation]
 
 ---
 
-## סיכום פונדמנטלי
+## Fundamental Summary
 
-**חיוביים:**
-✅ [ממצא 1 + נתון]
-✅ [ממצא 2 + נתון]
-✅ [ממצא 3 + נתון]
+**Positives:**
+✅ [Finding 1 + data]
+✅ [Finding 2 + data]
+✅ [Finding 3 + data]
 
-**סיכונים:**
-⚠️ [סיכון פונדמנטלי]
-⚠️ [סיכון תמחור]
-❌ [דגל אדום — אם יש]
+**Risks:**
+⚠️ [Fundamental risk]
+⚠️ [Valuation risk]
+❌ [Red flag — if any]
 
-**מה יבטל את התזה:** [קו אדום ברור]
-**הכי תלוי ב:** [הנחה קריטית אחת]
+**What would invalidate the thesis:** [Clear red line]
+**Most dependent on:** [One critical assumption]
 
-פונדמנטלס: [STRONG / MODERATE / WEAK]
+Fundamentals: [STRONG / MODERATE / WEAK]
 ```
 
 ---
 
-## נספח — 26 ממדי ניתוח
+## Appendix — 26 Analysis Dimensions
 
-> עבור על כל 26 הממדים — חפש נתונים עדכניים, ענה על כל שאלה.
-> [TICKER] = הטיקר | [SECTOR] | [PEER 1] / [PEER 2]
+> Go through all 26 dimensions — search for current data, answer every question.
+> [TICKER] = the ticker | [SECTOR] | [PEER 1] / [PEER 2]
 
 ### Layer 01 — Profitability
 
-| # | ממד | נתונים | השוואה | שאלה מרכזית |
-|---|-----|--------|--------|---------------|
-| 01 | Revenue Growth | 8Q YoY & QoQ | [PEER 1], [PEER 2], [SECTOR] | מאיץ או מואט? |
-| 02 | Gross Margin | 8Q | [PEER 1], [PEER 2], [SECTOR] | מתרחב/מצטמצם? Pricing power? |
-| 03 | Operating Margin | 8Q | [PEER 1], [PEER 2], [SECTOR] | Operating leverage משתפר? |
-| 04 | Net Margin | 8Q | [PEER 1], [PEER 2], [SECTOR] | פער vs operating → ריבית/מס/חד-פעמי? |
-| 05 | EPS | 8Q reported vs est | [SECTOR] beat rate | Beat streak מתרחב/מצטמצם? |
-| 06 | EBITDA | 8Q reported vs adj | [PEER 1], [PEER 2], [SECTOR] | ⚠️ גאפ reported/adj מתרחב = איכות רווחים יורדת |
+| # | Dimension | Data | Comparison | Key Question |
+|---|-----------|------|------------|--------------|
+| 01 | Revenue Growth | 8Q YoY & QoQ | [PEER 1], [PEER 2], [SECTOR] | Accelerating or decelerating? |
+| 02 | Gross Margin | 8Q | [PEER 1], [PEER 2], [SECTOR] | Expanding/contracting? Pricing power? |
+| 03 | Operating Margin | 8Q | [PEER 1], [PEER 2], [SECTOR] | Operating leverage improving? |
+| 04 | Net Margin | 8Q | [PEER 1], [PEER 2], [SECTOR] | Gap vs operating → interest/tax/one-time? |
+| 05 | EPS | 8Q reported vs est | [SECTOR] beat rate | Beat streak expanding/contracting? |
+| 06 | EBITDA | 8Q reported vs adj | [PEER 1], [PEER 2], [SECTOR] | ⚠️ Widening reported/adj gap = declining earnings quality |
 
 ### Layer 02 — Valuation
 
-| # | ממד | נתונים | השוואה | שאלה מרכזית |
-|---|-----|--------|--------|---------------|
-| 07 | P/E TTM | כעת + 5Y avg | [PEER 1], [PEER 2], [SECTOR] | פרמיה/הנחה vs היסטוריה ועמיתים? |
-| 08 | Forward P/E | NTM + שינוי 3M | [PEER 1], [PEER 2], [SECTOR] | Multiple מתרחב מהמחיר או מהאומדנים? |
-| 09 | P/S | כעת + 3Y avg | [PEER 1], [PEER 2], [SECTOR] | מוצדק ע"י gross margin + צמיחה? |
-| 10 | EV/EBITDA | כעת adj לחוב/מזומן | [PEER 1], [PEER 2], [SECTOR] | זול/יקר ברמת enterprise? |
-| 11 | PEG | P/E ÷ 3Y EPS CAGR | [PEER 1], [PEER 2], [SECTOR] | הצמיחה מצדיקה את ה-P/E? |
-| 12 | P/B | כעת + 5Y avg | [PEER 1], [PEER 2], [SECTOR] | פרמיה P/B מוצדקת ע"י ROE גבוה? |
+| # | Dimension | Data | Comparison | Key Question |
+|---|-----------|------|------------|--------------|
+| 07 | P/E TTM | Current + 5Y avg | [PEER 1], [PEER 2], [SECTOR] | Premium/discount vs history and peers? |
+| 08 | Forward P/E | NTM + 3M change | [PEER 1], [PEER 2], [SECTOR] | Multiple expanding from price or estimates? |
+| 09 | P/S | Current + 3Y avg | [PEER 1], [PEER 2], [SECTOR] | Justified by gross margin + growth? |
+| 10 | EV/EBITDA | Current adj for debt/cash | [PEER 1], [PEER 2], [SECTOR] | Cheap/expensive at enterprise level? |
+| 11 | PEG | P/E ÷ 3Y EPS CAGR | [PEER 1], [PEER 2], [SECTOR] | Does growth justify the P/E? |
+| 12 | P/B | Current + 5Y avg | [PEER 1], [PEER 2], [SECTOR] | P/B premium justified by high ROE? |
 
 ### Layer 03 — Cash Flow
 
-| # | ממד | נתונים | השוואה | שאלה מרכזית |
-|---|-----|--------|--------|---------------|
-| 13 | OCF | 8Q OCF vs Net Income | [SECTOR] | ⚠️ OCF בעקביות < Net Income = דגל אדום |
-| 14 | FCF | 8Q growth | vs Revenue & Net Income | FCF גדל מהר מהכנסות? (= מודל סקיילבילי) |
-| 15 | FCF Margin | 8Q % | [PEER 1], [PEER 2], [SECTOR] | Top/bottom quartile בסקטור? |
-| 16 | FCF Yield | TTM FCF / Market Cap | 10Y Treasury + [SECTOR] | Yield מפצה על סיכון מניה? |
+| # | Dimension | Data | Comparison | Key Question |
+|---|-----------|------|------------|--------------|
+| 13 | OCF | 8Q OCF vs Net Income | [SECTOR] | ⚠️ OCF consistently < Net Income = red flag |
+| 14 | FCF | 8Q growth | vs Revenue & Net Income | FCF growing faster than revenue? (= scalable model) |
+| 15 | FCF Margin | 8Q % | [PEER 1], [PEER 2], [SECTOR] | Top/bottom quartile in sector? |
+| 16 | FCF Yield | TTM FCF / Market Cap | 10Y Treasury + [SECTOR] | Yield compensates for equity risk? |
 
 ### Layer 04 — Financial Health
 
-| # | ממד | נתונים | השוואה | שאלה מרכזית |
-|---|-----|--------|--------|---------------|
+| # | Dimension | Data | Comparison | Key Question |
+|---|-----------|------|------------|--------------|
 | 17 | Debt/Equity | 4Y + interest coverage | [PEER 1], [PEER 2], [SECTOR] | ⚠️ Coverage < 3x + EBITDA −30% stress test |
-| 18 | Net Cash / Debt | מזומן vs חוב כעת | [PEER 1], [PEER 2], [SECTOR] | כמה רבעונות הוצאות מכסה המזומן? |
-| 19 | Current Ratio | 4Q + quick ratio | [SECTOR] | נזילות משתפרת? פירעונות קרובים? |
-| 20 | ROE | 5Y DuPont decomposition | [PEER 1], [PEER 2], [SECTOR] | ROE אמיתי (margin/turnover) או leverage בלבד? |
-| 21 | ROIC vs WACC | 5Y ROIC-WACC spread | [PEER 1], [PEER 2], [SECTOR] | ⚠️ Spread מתרחב = compounder; מצטמצם = שחיקה |
+| 18 | Net Cash / Debt | Cash vs debt now | [PEER 1], [PEER 2], [SECTOR] | How many quarters of expenses does cash cover? |
+| 19 | Current Ratio | 4Q + quick ratio | [SECTOR] | Liquidity improving? Near-term maturities? |
+| 20 | ROE | 5Y DuPont decomposition | [PEER 1], [PEER 2], [SECTOR] | Real ROE (margin/turnover) or leverage only? |
+| 21 | ROIC vs WACC | 5Y ROIC-WACC spread | [PEER 1], [PEER 2], [SECTOR] | ⚠️ Expanding spread = compounder; contracting = erosion |
 
 ### Layer 05 — Forward Signals
 
-| # | ממד | נתונים | השוואה | שאלה מרכזית |
-|---|-----|--------|--------|---------------|
-| 22 | Management Guidance | Q + FY vs קונצנזוס | vs guidance שנה קודמת | שמרני/אגרסיבי? Bar גבוה/נמוך? |
-| 23 | Analyst Consensus | Buy/Hold/Sell + PT | שינוי 3M | סנטימנט משתפר? פיזור PT רחב = מחלוקת? |
-| 24 | Earnings Revisions | NTM EPS שינוי 90d | % מעלים vs מורידים | Revisions = leading indicator לכיוון המחיר |
-| 25 | Share Buybacks | 8Q dollars + shares | vs SBC dilution | ⚠️ האם buybacks מקטינים share count בפועל? |
-| 26 | Insider Transactions | 6M transactions | vs נורמה היסטורית | Cluster buying = אות עוצמה גבוהה |
+| # | Dimension | Data | Comparison | Key Question |
+|---|-----------|------|------------|--------------|
+| 22 | Management Guidance | Q + FY vs consensus | vs prior year guidance | Conservative/aggressive? Bar high/low? |
+| 23 | Analyst Consensus | Buy/Hold/Sell + PT | 3M change | Sentiment improving? Wide PT range = disagreement? |
+| 24 | Earnings Revisions | NTM EPS 90d change | % raising vs lowering | Revisions = leading indicator for price direction |
+| 25 | Share Buybacks | 8Q dollars + shares | vs SBC dilution | ⚠️ Do buybacks actually reduce share count? |
+| 26 | Insider Transactions | 6M transactions | vs historical norm | Cluster buying = high-conviction signal |
 
 ---
 
-⚠️ ניתוח מבוסס מידע ציבורי בלבד. אינו ייעוץ השקעות.
+⚠️ Analysis based on public information only. Not investment advice.

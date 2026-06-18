@@ -1,117 +1,117 @@
 # SKILL-investment-deep-analyze.md
 > `0 - מערכת/SKILL-investment-deep-analyze.md`
-> נטען ל-deep dive / ניתוח מלא / השקעה לטווח ארוך
+> Loaded for deep dive / full analysis / long-term investment
 
 ---
 
-## תפקיד
+## Role
 
-Orchestrator — מריץ בסדר את שלושת הסקילים ואז משלב לניתוח מלא אחד עם המלצה סופית.
-
----
-
-## זרימת עבודה
-
-**לפני שמתחיל — הצהר:**
-> "מריץ ניתוח מלא על [TICKER]. שלב 1: פונדמנטלס → שלב 2: גרף → שלב 3: Stop Loss → סיכום."
-
-### שלב 1 — פונדמנטלי
-קרא וטען `0 - מערכת/SKILL-investment-fundamental.md`.
-בצע את כל החיפושים ומלא את כל 5 השכבות + 26 הממדים.
-סיים את השלב ב-**סיכום פונדמנטלי** (STRONG / MODERATE / WEAK).
-
-### שלב 2 — גרפי
-קרא וטען `0 - מערכת/SKILL-investment-graph.md`.
-שלוף OHLCV מ-IBKR, חשב את כל האינדיקטורים, מלא את הטבלאות.
-סיים את השלב ב-**טכני** (BULLISH / NEUTRAL / BEARISH) + Trend Health Score.
-
-### שלב 3 — Stop Loss
-קרא וטען `0 - מערכת/SKILL-investment-stop-loss.md`.
-קבע את רמת הסטופ המדויקת לפי שיטת העדיפות.
-סיים את השלב ב-**פלט סטופ** (רמה + שיטה + הפעלה).
-
-### שלב 4 — סינתזה
-מלא את Checklist הכניסה, חשב R/R, וכתוב המלצה סופית.
+Orchestrator — runs the three sub-skills in sequence, then synthesizes into a single complete analysis with a final recommendation.
 
 ---
 
-## Checklist כניסה
+## Workflow
 
-| # | קריטריון | עובר? |
-|---|----------:|-------|
-| 1 | מחיר מעל EMA150 עולה | ✅/❌ |
+**Before starting — declare:**
+> "Running full analysis on [TICKER]. Step 1: Fundamentals → Step 2: Chart → Step 3: Stop Loss → Summary."
+
+### Step 1 — Fundamental
+Read and load `0 - מערכת/SKILL-investment-fundamental.md`.
+Run all searches and fill all 5 layers + 26 dimensions.
+End the step with a **Fundamental Summary** (STRONG / MODERATE / WEAK).
+
+### Step 2 — Technical
+Read and load `0 - מערכת/SKILL-investment-graph.md`.
+Pull OHLCV from IBKR, calculate all indicators, fill all tables.
+End the step with **Technical** (BULLISH / NEUTRAL / BEARISH) + Trend Health Score.
+
+### Step 3 — Stop Loss
+Read and load `0 - מערכת/SKILL-investment-stop-loss.md`.
+Determine the precise stop level according to the priority method.
+End the step with **Stop Output** (level + method + trigger).
+
+### Step 4 — Synthesis
+Complete the Entry Checklist, calculate R/R, and write the final recommendation.
+
+---
+
+## Entry Checklist
+
+| # | Criterion | Pass? |
+|---|-----------|-------|
+| 1 | Price above rising EMA150 | ✅/❌ |
 | 2 | Power of Three (50>150>200) | ✅/❌ |
-| 3 | מרחק מ-EMA150 פחות מ-20% | ✅/❌ |
-| 4 | RSI מתחת ל-70 | ✅/❌ |
-| 5 | MACD momentum חיובי | ✅/❌ |
-| 6 | EPS צומח 3+ רבעונים | ✅/❌ |
-| 7 | הכנסות צומחות YoY | ✅/❌ |
-| 8 | Institutional ownership עולה | ✅/❌ |
-| 9 | Moat ברור | ✅/❌ |
-| 10 | תמחור לא מוגזם (PEG<2 / EV/EBITDA סביר) | ✅/❌ |
-| 11 | תמה מאקרו תומכת | ✅/❌ |
-| 12 | Risk/Reward לפחות 1:2 | ✅/❌ |
+| 3 | Distance from EMA150 less than 20% | ✅/❌ |
+| 4 | RSI below 70 | ✅/❌ |
+| 5 | MACD momentum positive | ✅/❌ |
+| 6 | EPS growing 3+ quarters | ✅/❌ |
+| 7 | Revenue growing YoY | ✅/❌ |
+| 8 | Institutional ownership increasing | ✅/❌ |
+| 9 | Clear moat | ✅/❌ |
+| 10 | Valuation not excessive (PEG<2 / reasonable EV/EBITDA) | ✅/❌ |
+| 11 | Supporting macro theme | ✅/❌ |
+| 12 | Risk/Reward at least 1:2 | ✅/❌ |
 | 13 | ROIC > WACC | ✅/❌ |
-| 14 | Forward Signals חיוביים (revisions / guidance) | ✅/❌ |
+| 14 | Positive Forward Signals (revisions / guidance) | ✅/❌ |
 
-**12-14 ✅ → BUY | 9-11 ✅ → WAIT | פחות מ-9 → AVOID**
+**12-14 ✅ → BUY | 9-11 ✅ → WAIT | Less than 9 → AVOID**
 
 ---
 
-## פלט סופי
+## Final Output
 
 ```
-## [TICKER] — Deep Analysis — [תאריך]
-### [שם חברה] | [בורסה] | [סקטור]
+## [TICKER] — Deep Analysis — [Date]
+### [Company Name] | [Exchange] | [Sector]
 
 ---
 
-[פלט מלא של SKILL-investment-fundamental.md]
+[Full output of SKILL-investment-fundamental.md]
 
 ---
 
-[פלט מלא של SKILL-investment-graph.md]
+[Full output of SKILL-investment-graph.md]
 
 ---
 
-[פלט מלא של SKILL-investment-stop-loss.md]
+[Full output of SKILL-investment-stop-loss.md]
 
 ---
 
-## ✅ Checklist כניסה
+## ✅ Entry Checklist
 
-[טבלת 14 הקריטריונים עם ✅/❌]
+[Table of 14 criteria with ✅/❌]
 
-ציון: X/14
+Score: X/14
 
 ---
 
 ## 📐 Trade Setup
 
-אזור כניסה: $X.XX – $X.XX
-יעד ראשוני: $X.XX  (+X%)
-יעד שניוני: $X.XX  (+X%)
-Stop Loss: $X.XX (שיטה: [EMA150 / תמיכה / ATR])
-Risk/Reward: 1:X
+Entry zone:       $X.XX – $X.XX
+Initial target:   $X.XX  (+X%)
+Secondary target: $X.XX  (+X%)
+Stop Loss:        $X.XX (method: [EMA150 / Support / ATR])
+Risk/Reward:      1:X
 
 ---
 
-## 🏁 המלצה סופית
+## 🏁 Final Recommendation
 
 **[BUY / HOLD / SELL / WAIT]**
 
-[2-3 משפטים המשלבים פונדמנטלס + טכני + סטופ]
+[2-3 sentences combining fundamentals + technicals + stop]
 
-יישור פונדמנטלי-טכני: [מלא ✅ / חלקי ⚠️ / סותר ❌]
-ביטחון: [גבוה/בינוני/נמוך] | אופק: [X חודשים]
+Fundamental-Technical alignment: [Full ✅ / Partial ⚠️ / Conflicting ❌]
+Confidence: [High/Medium/Low] | Horizon: [X months]
 Upside: X% | Downside: X% | R/R: 1:X
 
-**מה יבטל את התזה:** [קו אדום]
-**הכי תלוי ב:** [הנחה קריטית]
+**What would invalidate the thesis:** [Red line]
+**Most dependent on:** [Critical assumption]
 
-מקורות: [שמות / URLs]
+Sources: [Names / URLs]
 ```
 
 ---
 
-⚠️ ניתוח מבוסס מידע ציבורי בלבד. אינו ייעוץ השקעות.
+⚠️ Analysis based on public information only. Not investment advice.

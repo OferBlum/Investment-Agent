@@ -1,100 +1,100 @@
 # SKILL-investment-stop-loss.md
 > `0 - מערכת/SKILL-investment-stop-loss.md`
-> נטען לכל בקשה הקשורה ל-Stop Loss — קביעה, עדכון, או הסבר
+> Loaded for any Stop Loss request — setting, updating, or explaining
 
 ---
 
-## תפקיד
+## Role
 
-קבע רמת Stop Loss מדויקת לפי נתוני שוק חיים. תמיד מחושב — לא מנטלי.
+Determine a precise Stop Loss level based on live market data. Always calculated — never mental.
 
 ---
 
-## נתונים — IBKR
+## Data — IBKR
 
 1. `search_contracts` (symbol=TICKER) → conid
-2. `get_price_snapshot` (conid) → מחיר נוכחי
-3. `get_price_history` (conid, period="1y", bar="1d") → OHLCV יומי
+2. `get_price_snapshot` (conid) → current price
+3. `get_price_history` (conid, period="1y", bar="1d") → daily OHLCV
 
-מתוך נתוני OHLCV חשב:
-- **EMA150** — ממוצע מעריכי על 150 ימי סגירה
-- **ATR(14)** — ממוצע True Range על 14 ימים: `TR = max(H-L, |H-Prev.Close|, |L-Prev.Close|)`
-- **Swing Low אחרון** — ה-Low הנמוך ביותר בחלון 20 ימים לפני המחיר הנוכחי
-- **Fair Value Gaps** — שלשת נרות שבה Low[i] > High[i-2] (Bullish FVG); מיקום התחתית הוא High[i-2]
+Calculate from OHLCV data:
+- **EMA150** — exponential moving average over 150 closing days
+- **ATR(14)** — average True Range over 14 days: `TR = max(H-L, |H-Prev.Close|, |L-Prev.Close|)`
+- **Last Swing Low** — the lowest Low in the 20-day window before the current price
+- **Fair Value Gaps** — three-candle sequence where Low[i] > High[i-2] (Bullish FVG); bottom of the gap is High[i-2]
 
 ---
 
-## שיטת הסטופ — לפי עדיפות
+## Stop Method — Priority Order
 
-### 1. EMA150 — ברירת מחדל (מניה מעל EMA150)
+### 1. EMA150 — Default (stock above EMA150)
 ```
-סטופ = EMA150 − (1% עד 2%)
-הפעלה: סגירה יומית מתחת לרמה
-ETFs: סגירה שבועית מתחת ל-EMA150
-```
-
-### 2. תמיכה + FVG — (מניה מתחת ל-EMA150 או EMA150 רחוק מדי)
-```
-זהה: Swing Low אחרון + FVGs פתוחים
-סטופ = רמה הקרובה ביותר למחיר − (1% עד 2%)
-גאפ שנסגר = מומנטום השתנה → יציאה
+Stop = EMA150 − (1% to 2%)
+Trigger: daily close below the level
+ETFs: weekly close below EMA150
 ```
 
-### 3. ATR — (כשנדרש דיוק בסביבה תנודתית)
+### 2. Support + FVG — (stock below EMA150 or EMA150 too far away)
 ```
-סטופ = Support − (1.5 × ATR)
-משמש כשEMA150 רחוק >15% מהמחיר
+Identify: last Swing Low + open FVGs
+Stop = nearest level to price − (1% to 2%)
+Closed gap = momentum shifted → exit
+```
+
+### 3. ATR — (when precision needed in volatile environment)
+```
+Stop = Support − (1.5 × ATR)
+Used when EMA150 is >15% away from price
 ```
 
 ### 4. Time Stop
 ```
-אם המניה לא זזה 5–10 ימים אחרי כניסה → סגור או צמצם 50%
+If stock does not move 5–10 days after entry → close or reduce 50%
 ```
 
-### 5. Trailing Stop (לאחר רווח)
+### 5. Trailing Stop (after profit)
 ```
-הגעת ל-1R → הזז סטופ ל-Break Even
-סווינג מהיר → קדם לEMA21
-סווינג איטי → קדם לEMA50
+Reach 1R → move stop to Break Even
+Fast swing → trail to EMA21
+Slow swing → trail to EMA50
 ```
 
 ---
 
-## צ'ק-ליסט לפני קביעת סטופ
+## Pre-Stop Checklist
 
-1. מה ה-EMA150 הנוכחי? (IBKR)
-2. איפה ה-Swing Low המשמעותי האחרון? (IBKR OHLCV)
-3. האם יש FVG פתוח קרוב? (IBKR OHLCV)
-4. האם המרחק מהסטופ למחיר הכניסה הגיוני (לא >8%)?
-5. האם הסכום הכספי שאפסיד סביר לגודל החשבון?
-
----
-
-## כלל ברזל
-
-**לעולם לא סטופ מנטלי** — פקודה במערכת בלבד.
-לא לסחור פוזיציות גדולות לתוך דוחות (Gap Down risk).
+1. What is the current EMA150? (IBKR)
+2. Where is the last significant Swing Low? (IBKR OHLCV)
+3. Is there an open FVG nearby? (IBKR OHLCV)
+4. Is the distance from stop to entry price reasonable (not >8%)?
+5. Is the dollar amount at risk reasonable relative to account size?
 
 ---
 
-## פלט
+## Iron Rule
+
+**Never a mental stop** — system order only.
+Do not hold large positions into earnings (Gap Down risk).
+
+---
+
+## Output
 
 ```
 ## Stop Loss — [TICKER]
 
-📍 מחיר כניסה: $X.XX
-🛡️ שיטה: [EMA150 / תמיכה+FVG / ATR]
-🚨 סטופ: $X.XX  (X.X% מהכניסה)
-⚡ הפעלה: [סגירה יומית / שבועית] מתחת ל-$X.XX
-💸 סיכון למניה: $X.XX
+📍 Entry price:   $X.XX
+🛡️ Method:        [EMA150 / Support+FVG / ATR]
+🚨 Stop:          $X.XX  (X.X% from entry)
+⚡ Trigger:       [Daily / Weekly] close below $X.XX
+💸 Risk per share: $X.XX
 
-📊 נתונים:
+📊 Data:
    EMA150:     $X.XX
    ATR(14):    $X.XX
    Swing Low:  $X.XX
-   FVG:        $X.XX–$X.XX [פתוח/סגור]
+   FVG:        $X.XX–$X.XX [open/closed]
 ```
 
 ---
 
-⚠️ ניתוח מבוסס נתונים ציבוריים. אינו ייעוץ השקעות.
+⚠️ Analysis based on public data. Not investment advice.

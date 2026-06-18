@@ -1,35 +1,35 @@
 # SKILL-investment-graph.md
 > `0 - מערכת/SKILL-investment-graph.md`
-> נטען לניתוח טכני/גרפי בלבד — ללא פונדמנטלס וללא המלצת כניסה
+> Loaded for technical/chart analysis only — no fundamentals and no entry recommendation
 
 ---
 
-## תפקיד
+## Role
 
-Quantitative Technical Analyst. ניתוח טכני מלא: מגמה, אינדיקטורים, מבנה שוק.
-הפלט של קובץ זה הוא חומר גלם לניתוח מלא (`SKILL-investment-deep-analyze.md`) — או תשובה עצמאית לשאלה טכנית.
+Quantitative Technical Analyst. Full technical analysis: trend, indicators, market structure.
+The output of this file is raw material for a full analysis (`SKILL-investment-deep-analyze.md`) — or a standalone answer to a technical question.
 
 ---
 
-## נתונים — IBKR
+## Data — IBKR
 
 1. `search_contracts` (symbol=TICKER) → conid
-2. `get_price_snapshot` (conid) → מחיר נוכחי + שינוי יומי
-3. `get_price_history` (conid, period="1y", bar="1d") → OHLCV יומי
+2. `get_price_snapshot` (conid) → current price + daily change
+3. `get_price_history` (conid, period="1y", bar="1d") → daily OHLCV
 
-מתוך נתוני OHLCV חשב:
-- **EMA 50, 150, 200** — מהסגירות
-- **ATR(14)** — ממוצע True Range 14 ימים
+Calculate from OHLCV data:
+- **EMA 50, 150, 200** — from closing prices
+- **ATR(14)** — 14-day average True Range
 - **RSI(14)** — Relative Strength Index
-- **MACD(12,26,9)** — קו MACD, Signal, היסטוגרמה
-- **Volume SMA(20)** — ממוצע נפח יומי
+- **MACD(12,26,9)** — MACD line, Signal line, Histogram
+- **Volume SMA(20)** — 20-day average daily volume
 
-לחיפוש תבניות ואישור ויזואלי (אם נדרש):
-→ Playwright: `"[TICKER] stock chart TradingView"` או `"[TICKER] chart pattern FinViz"`
+For pattern search and visual confirmation (if needed):
+→ Playwright: `"[TICKER] stock chart TradingView"` or `"[TICKER] chart pattern FinViz"`
 
 ---
 
-## חיפושים נוספים — Playwright (אם נדרש)
+## Additional Searches — Playwright (if needed)
 
 ```
 "[TICKER] RSI MACD technical analysis current"
@@ -41,76 +41,76 @@ Quantitative Technical Analyst. ניתוח טכני מלא: מגמה, אינדי
 
 ---
 
-## פלט
+## Output
 
 ```
-## [TICKER] — Graph Analysis — [תאריך]
+## [TICKER] — Graph Analysis — [Date]
 
 ---
 
 ### 🎯 Trend Health Score: X/10
-8-10 → מגמה חזקה
-5-7  → מגמה מעורבת, זהירות
-1-4  → לא עכשיו — ראה Reversal Setup
+8-10 → Strong trend
+5-7  → Mixed trend, caution
+1-4  → Not now — see Reversal Setup
 
 ---
 
 ### 📊 Moving Average Ribbon
 
-| מחוון | ערך | מצב |
-|-------|-----|-----|
-| מחיר נוכחי | $X.XX | — |
-| EMA 50 | $X.XX | [מעל/מתחת] |
-| EMA 150 | $X.XX | [מעל ✅ / מתחת ❌] |
-| EMA 200 | $X.XX | [מעל/מתחת] |
-| שיפוע EMA150 | עולה/שטוח/יורד | ✅/⚠️/❌ |
-| Golden Cross (50>200) | כן/לא | ✅/❌ |
-| Power of Three (50>150>200) | כן/לא | ✅/❌ |
-| מרחק ממחיר ל-EMA150 | X% | [<15% ✅ / 15-25% ⚠️ / >25% ❌] |
+| Indicator | Value | Status |
+|-----------|-------|--------|
+| Current price | $X.XX | — |
+| EMA 50 | $X.XX | [above/below] |
+| EMA 150 | $X.XX | [Above ✅ / Below ❌] |
+| EMA 200 | $X.XX | [above/below] |
+| EMA150 slope | Rising/Flat/Falling | ✅/⚠️/❌ |
+| Golden Cross (50>200) | Yes/No | ✅/❌ |
+| Power of Three (50>150>200) | Yes/No | ✅/❌ |
+| Distance from price to EMA150 | X% | [<15% ✅ / 15-25% ⚠️ / >25% ❌] |
 
 ---
 
 ### 📈 Indicators
 
-RSI (14): X — [קנייה-יתר >70 / נורמלי / מכירת-יתר <30]
-MACD: [Bullish cross / Bearish cross / ניטרלי] | היסטוגרמה: [מתרחבת/מצטמצמת]
-Volume: [מעל/מתחת] ממוצע 20-ימי | [נפח עולה במגמה = אישור ✅]
+RSI (14): X — [Overbought >70 / Normal / Oversold <30]
+MACD: [Bullish cross / Bearish cross / Neutral] | Histogram: [Expanding/Contracting]
+Volume: [Above/Below] 20-day average | [Volume rising with trend = confirmation ✅]
 
 ---
 
 ### 🏗️ Market Structure
 
-תבנית: [VCP / Cup & Handle / Flat Base / Flag / אין]
-תמיכה עיקרית: $X.XX
-התנגדות עיקרית: $X.XX
-Swing Low אחרון: $X.XX
-הערה: [משפט אחד על המבנה]
+Pattern:           [VCP / Cup & Handle / Flat Base / Flag / None]
+Main support:      $X.XX
+Main resistance:   $X.XX
+Last Swing Low:    $X.XX
+Note: [One sentence on the structure]
 
 ---
 
-### ⚡ Catalysts (6 חודשים)
+### ⚡ Catalysts (6 months)
 
-- דוח רווח הבא: [תאריך משוער]
-- FOMC קרוב: [תאריך]
-- קטליסט ספציפי: [אם יש]
+- Next earnings report: [estimated date]
+- Upcoming FOMC: [date]
+- Specific catalyst: [if any]
 
 ---
 
 ### ⚠️ Reversal Setup
-(רלוונטי רק אם מחיר מתחת EMA150 — אחרת דלג)
+(Relevant only if price is below EMA150 — otherwise skip)
 
-קריטריוני חזרה:
-- סגירה שבועית מעל EMA150 + נפח גבוה מהממוצע
-- EMA150 מתחיל לשטוח ואז לעלות
-- RSI חוזר מעל 50
+Return criteria:
+- Weekly close above EMA150 + volume above average
+- EMA150 starts to flatten then rise
+- RSI returns above 50
 
-המתן. הגדר התראה ב-$X.XX
+Wait. Set alert at $X.XX
 
 ---
 
-טכני: [BULLISH / NEUTRAL / BEARISH]
+Technical: [BULLISH / NEUTRAL / BEARISH]
 ```
 
 ---
 
-⚠️ ניתוח מבוסס נתונים ציבוריים. אינו ייעוץ השקעות.
+⚠️ Analysis based on public data. Not investment advice.
