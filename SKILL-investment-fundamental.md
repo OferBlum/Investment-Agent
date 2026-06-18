@@ -1,5 +1,5 @@
 # SKILL-investment-fundamental.md
-> `0 - מערכת/SKILL-investment-fundamental.md`
+> `0 - System/SKILL-investment-fundamental.md`
 > Loaded for fundamental analysis only — no technicals and no entry recommendation
 
 ---

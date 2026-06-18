@@ -1,5 +1,5 @@
 # SKILL-investment-agent.md
-> `0 - מערכת/SKILL-investment-agent.md`
+> `0 - System/SKILL-investment-agent.md`
 
 ---
 
@@ -38,7 +38,7 @@ Deep analysis delegated to skills: `SKILL-investment-stop-loss` / `SKILL-investm
 
 ## Portfolio File Rules
 
-1. Live holdings data — pull from IBKR (`get_account_positions`). Read `2 - פתקים/תיק השקעות.md` only for watchlist and statuses not in IBKR.
+1. Live holdings data — pull from IBKR (`get_account_positions`). Read `2 - Notes/Investment Portfolio.md` only for watchlist and statuses not in IBKR.
 2. Writing to vault — only holdings updates, and only after explicit approval.
 3. Analyses displayed in chat only — not saved to vault.
 
@@ -50,10 +50,10 @@ Deep analysis delegated to skills: `SKILL-investment-stop-loss` / `SKILL-investm
 |---------|------|
 | quick-check / stock status / weekly scan | Continue here — no additional file needed |
 | how many to buy / position size | Continue here — see Position Sizing section |
-| stop loss / stop / where to place stop | `0 - מערכת/SKILL-investment-stop-loss.md` |
-| technical analysis / chart / pattern / indicators | `0 - מערכת/SKILL-investment-graph.md` |
-| fundamental analysis / fundamentals / valuation / moat | `0 - מערכת/SKILL-investment-fundamental.md` |
-| deep dive / full analysis / long-term investment | `0 - מערכת/SKILL-investment-deep-analyze.md` |
+| stop loss / stop / where to place stop | `0 - System/SKILL-investment-stop-loss.md` |
+| technical analysis / chart / pattern / indicators | `0 - System/SKILL-investment-graph.md` |
+| fundamental analysis / fundamentals / valuation / moat | `0 - System/SKILL-investment-fundamental.md` |
+| deep dive / full analysis / long-term investment | `0 - System/SKILL-investment-deep-analyze.md` |
 | general investment question | Answer directly — no additional file needed |
 
 **If unclear — ask one question:**
@@ -137,7 +137,7 @@ Position size    = Number of shares × Entry price
 1. `get_account_positions` → live holdings list from IBKR
 2. `get_account_trades` → trades from the past week
 3. For each holding: `get_price_snapshot` + `get_price_history` → quick-check + EMA150
-4. Read `2 - פתקים/תיק השקעות.md` → watchlist only
+4. Read `2 - Notes/Investment Portfolio.md` → watchlist only
 5. Check SPY + QQQ vs their EMA150 (IBKR)
 6. Macro events in the next two weeks (Playwright)
 
@@ -157,7 +157,7 @@ Position size    = Number of shares × Entry price
 
 ## PORTFOLIO UPDATE
 
-1. Read `2 - פתקים/תיק השקעות.md`
+1. Read `2 - Notes/Investment Portfolio.md`
 2. Update only the relevant section
 3. Do not change frontmatter
 4. Do not add information beyond the holding
@@ -182,4 +182,4 @@ When asked about upgrading the portfolio — `get_account_positions` + `get_acco
 - Swing Stop Loss: below swing low, no more than 8%
 - Position Stop Loss: weekly close below EMA150
 
-> For any detailed stop loss request → `0 - מערכת/SKILL-investment-stop-loss.md`
+> For any detailed stop loss request → `0 - System/SKILL-investment-stop-loss.md`

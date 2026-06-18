@@ -1,5 +1,5 @@
 # SKILL-investment-graph.md
-> `0 - מערכת/SKILL-investment-graph.md`
+> `0 - System/SKILL-investment-graph.md`
 > Loaded for technical/chart analysis only — no fundamentals and no entry recommendation
 
 ---

@@ -1,5 +1,5 @@
 # SKILL-investment-stop-loss.md
-> `0 - מערכת/SKILL-investment-stop-loss.md`
+> `0 - System/SKILL-investment-stop-loss.md`
 > Loaded for any Stop Loss request — setting, updating, or explaining
 
 ---

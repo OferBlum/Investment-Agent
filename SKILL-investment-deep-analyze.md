@@ -1,5 +1,5 @@
 # SKILL-investment-deep-analyze.md
-> `0 - מערכת/SKILL-investment-deep-analyze.md`
+> `0 - System/SKILL-investment-deep-analyze.md`
 > Loaded for deep dive / full analysis / long-term investment
 
 ---
@@ -16,17 +16,17 @@ Orchestrator — runs the three sub-skills in sequence, then synthesizes into a 
 > "Running full analysis on [TICKER]. Step 1: Fundamentals → Step 2: Chart → Step 3: Stop Loss → Summary."
 
 ### Step 1 — Fundamental
-Read and load `0 - מערכת/SKILL-investment-fundamental.md`.
+Read and load `0 - System/SKILL-investment-fundamental.md`.
 Run all searches and fill all 5 layers + 26 dimensions.
 End the step with a **Fundamental Summary** (STRONG / MODERATE / WEAK).
 
 ### Step 2 — Technical
-Read and load `0 - מערכת/SKILL-investment-graph.md`.
+Read and load `0 - System/SKILL-investment-graph.md`.
 Pull OHLCV from IBKR, calculate all indicators, fill all tables.
 End the step with **Technical** (BULLISH / NEUTRAL / BEARISH) + Trend Health Score.
 
 ### Step 3 — Stop Loss
-Read and load `0 - מערכת/SKILL-investment-stop-loss.md`.
+Read and load `0 - System/SKILL-investment-stop-loss.md`.
 Determine the precise stop level according to the priority method.
 End the step with **Stop Output** (level + method + trigger).
 

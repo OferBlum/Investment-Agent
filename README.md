@@ -59,21 +59,21 @@ Investment_Agent/
 
 1. **Clone or copy** this folder into your Obsidian vault's system directory:
    ```
-   <your-vault>/0 - מערכת/
+   <your-vault>/0 - System/
    ```
 
 2. **Place skill files** so Claude Code can find them:
    ```
-   <your-vault>/0 - מערכת/SKILL-investment-agent.md
-   <your-vault>/0 - מערכת/SKILL-investment-deep-analyze.md
-   <your-vault>/0 - מערכת/SKILL-investment-fundamental.md
-   <your-vault>/0 - מערכת/SKILL-investment-graph.md
-   <your-vault>/0 - מערכת/SKILL-investment-stop-loss.md
+   <your-vault>/0 - System/SKILL-investment-agent.md
+   <your-vault>/0 - System/SKILL-investment-deep-analyze.md
+   <your-vault>/0 - System/SKILL-investment-fundamental.md
+   <your-vault>/0 - System/SKILL-investment-graph.md
+   <your-vault>/0 - System/SKILL-investment-stop-loss.md
    ```
 
 3. **Create your personal portfolio file** by copying and editing `Portfolio.md`:
    ```
-   <your-vault>/2 - פתקים/תיק השקעות.md
+   <your-vault>/2 - Notes/Investment Portfolio.md
    ```
    Add your watchlist and any statuses not tracked in IBKR.
 
